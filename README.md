@@ -10,17 +10,17 @@ Set the environment variable RELAY_HOST to the fqdn of your Exchange Online serv
 
 This relay reads the username & password to authenticate to itself in a seperate user.conf file in the format:
 ```
-#username			#domain				#password
-no-reply			labtagon.com		somePassword
+#username      #domain          #password
+no-reply       labtagon.com     somePassword
 ```
 
 Additionally there is a constraint on what logins can use which sender e-mail, configured in sender_maps.conf, 
 since no restriction is taking place on the Exchange Online side. This means all e-mail addresses can be used as a sender.
 As a bonus this allows you to send mails from e-mail addresses of shared mailboxes, skipping the need for a licensed mailbox.
 ```
-#sender mail					#username and domain
-no-reply@labtagon.com			no-reply@labtagon.com
-allowed-sender@labtagon.com   	no-reply@labtagon.com
+#sender mail                  #username and domain
+no-reply@labtagon.com         no-reply@labtagon.com
+allowed-sender@labtagon.com   no-reply@labtagon.com
 ```
 
 In order to safely use this container you should bind mount your certificate pair, for testing purpose you could skip certificate checks in the smtp client.
