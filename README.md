@@ -4,7 +4,7 @@ forwarding them to Office365 Exchange Online, circumventing the basic auth ban r
 and accepting custom credentials using a bind mount secret.
 
 In order to setup this, you need a static public ip, whitelisting it as relay in Office365 Exchange Online.
-See @ruudmens for this on https://lazyadmin.nl/office-365/smtp-relay-in-office-365/
+See @ruudmens guide for this on https://lazyadmin.nl/office-365/smtp-relay-in-office-365/
 
 Set the environment variable RELAY_HOST to the fqdn of your Exchange Online server (something.mail.protection.outlook.com).
 
